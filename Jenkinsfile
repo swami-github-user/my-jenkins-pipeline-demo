@@ -12,7 +12,7 @@ pipeline {
 
         }
 
-        stage("test") {
+        stage("test1") {
 
             steps {
                 echo 'In this stage we test our application'
@@ -27,7 +27,20 @@ pipeline {
             }
 
         }
-        
+
+    }
+
+    post {
+
+        always{
+
+        }
+        success{
+
+        }
+        failure{
+            
+        }
     }
 
 }
