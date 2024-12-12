@@ -12,7 +12,7 @@ pipeline {
 
             steps {
                 echo 'in this stage we build the application'
-                sh './gradlew -v'
+                sh './gradlew --version'
             }
 
         }
