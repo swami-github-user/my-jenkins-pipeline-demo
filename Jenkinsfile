@@ -1,10 +1,6 @@
 pipeline {
 
     agent any
-    tools {
-        gradle 'Gradle-6.2'
-        
-    }
 
     stages {
 
@@ -12,7 +8,9 @@ pipeline {
 
             steps {
                 echo 'in this stage we build the application'
-                sh './gradlew -v'
+                nodejs('NodeJS-23.4.0'){
+                    sh 'yarn install'
+                }
             }
 
         }
