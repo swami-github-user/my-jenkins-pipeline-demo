@@ -1,6 +1,10 @@
 pipeline {
 
     agent any
+    tools {
+        gradle 'Gradle-8.11.1'
+        
+    }
 
     stages {
 
@@ -8,6 +12,7 @@ pipeline {
 
             steps {
                 echo 'in this stage we build the application'
+                sh './gradlew -v'
             }
 
         }
@@ -24,10 +29,11 @@ pipeline {
 
             steps {
                 echo 'In this stage we deploy our application'
+
             }
 
         }
 
     }
-    
+
 }
