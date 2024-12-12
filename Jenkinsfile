@@ -10,6 +10,7 @@ pipeline {
                 echo 'in this stage we build the application'
                 withGradle() {
                     sh './gradlew -v'
+                }
             }
 
         }
