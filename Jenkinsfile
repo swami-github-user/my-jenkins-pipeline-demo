@@ -8,9 +8,8 @@ pipeline {
 
             steps {
                 echo 'in this stage we build the application'
-                nodejs('NodeJS-23.4.0'){
-                    sh 'yarn install'
-                }
+                withGradle() {
+                    sh './gradlew -v'
             }
 
         }
